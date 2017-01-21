@@ -10,15 +10,15 @@ fun main(args: Array<String>) {
   val hostname = ip.getHostName()
 
   server.get("/", {
-    response.send("HTTP request processed by " + hostname) 
+    response.send("HTTP request processed by " + hostname + "\n") 
   })
 
   server.get("/machine", {
-    response.send(hostname) 
+    response.send(hostname + "\n") 
   })
 
   server.get("/health", {
-    response.send("OK") 
+    response.send("OK" + "\n") 
   })
   server.start()
 }
